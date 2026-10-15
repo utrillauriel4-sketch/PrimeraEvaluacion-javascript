@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primera Evaluación - Ejercicios Resueltos</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#eef2f7;color:#172033;font-family:Arial,Helvetica,sans-serif}
+.header{background:#173b7a;color:white;padding:42px 20px;text-align:center}
+.header h1{margin:0 0 8px;font-size:32px}
+.header p{margin:0;font-size:16px;color:#dce8ff}
+.container{width:min(1050px,94%);margin:30px auto}
+.exercise{background:#fff;border:1px solid #d9e0ea;border-radius:12px;margin-bottom:24px;overflow:hidden;box-shadow:0 5px 16px rgba(20,40,80,.07)}
+.exercise-head{background:#f1f5fb;border-bottom:1px solid #d9e0ea;padding:12px 20px;font-weight:bold;color:#173b7a}
+.exercise h2{font-size:18px;line-height:1.55;margin:0;padding:20px}
+.answer-title{margin:0 20px 10px;padding:9px 12px;background:#173b7a;color:#fff;border-radius:6px;font-size:13px;font-weight:bold;letter-spacing:.4px}
+pre{margin:0 20px 22px;background:#111827;color:#e8edf5;padding:20px;border-radius:8px;overflow:auto;white-space:pre-wrap;line-height:1.55;font-size:14px}
+code{font-family:Consolas,"Courier New",monospace}
+.footer{text-align:center;color:#667085;padding:10px 20px 35px}
+@media print{body{background:#fff}.exercise{box-shadow:none;break-inside:avoid}.header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header class="header">
+  <h1>Primera Evaluación</h1>
+  <p>Ejercicios resueltos — JavaScript</p>
+</header>
+<main class="container">
+
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 1</span>
+      </div>
+      <h2>Un estudiante realiza 4 exámenes, calcular el promedio de estos.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const nota1 = Number(prompt(&quot;Ingrese la primera nota:&quot;));
+const nota2 = Number(prompt(&quot;Ingrese la segunda nota:&quot;));
+const nota3 = Number(prompt(&quot;Ingrese la tercera nota:&quot;));
+const nota4 = Number(prompt(&quot;Ingrese la cuarta nota:&quot;));
+
+const promedio = (nota1 + nota2 + nota3 + nota4) / 4;
+
+console.log(&quot;Promedio:&quot;, promedio);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 2</span>
+      </div>
+      <h2>Calcular el área de un rectángulo.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const base = Number(prompt(&quot;Ingrese la base:&quot;));
+const altura = Number(prompt(&quot;Ingrese la altura:&quot;));
+
+const area = base * altura;
+
+console.log(&quot;Área del rectángulo:&quot;, area);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 3</span>
+      </div>
+      <h2>Calcular el área de un triángulo.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const base = Number(prompt(&quot;Ingrese la base:&quot;));
+const altura = Number(prompt(&quot;Ingrese la altura:&quot;));
+
+const area = (base * altura) / 2;
+
+console.log(&quot;Área del triángulo:&quot;, area);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 4</span>
+      </div>
+      <h2>Calcular el área de una circunferencia. (π = 3.14)</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const radio = Number(prompt(&quot;Ingrese el radio:&quot;));
+const pi = 3.14;
+
+const area = pi * radio * radio;
+
+console.log(&quot;Área de la circunferencia:&quot;, area);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 5</span>
+      </div>
+      <h2>Hallar el promedio de todos los elementos del arreglo. Entrada: [2, 6, 1, 8]. Salida: Promedio: 4.25.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const numeros = [2, 6, 1, 8];
+
+let suma = 0;
+
+for (let i = 0; i &lt; numeros.length; i++) {
+    suma += numeros[i];
+}
+
+const promedio = suma / numeros.length;
+
+console.log(&quot;Promedio:&quot;, promedio);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 6</span>
+      </div>
+      <h2>De un arreglo de números, retornar la suma de todos los números pares. Entrada: [1, 2, 5, 8, 9, 12, 2, 3].</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const numeros = [1, 2, 5, 8, 9, 12, 2, 3];
+
+let sumaPares = 0;
+
+for (let i = 0; i &lt; numeros.length; i++) {
+    if (numeros[i] % 2 === 0) {
+        sumaPares += numeros[i];
+    }
+}
+
+console.log(&quot;Suma de pares:&quot;, sumaPares);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 7</span>
+      </div>
+      <h2>Escriba un programa en JavaScript para mostrar el nombre del libro y el nombre del autor de los libros que tengan el estado de lectura “true”.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const library = [
+    {
+        author: &quot;Bill Gates&quot;,
+        title: &quot;The Road Ahead&quot;,
+        Status: true
+    },
+    {
+        author: &quot;Steve Jobs&quot;,
+        title: &quot;Walter Isaacson&quot;,
+        Status: true
+    },
+    {
+        author: &quot;Suzanne Collins&quot;,
+        title: &quot;Mockingjay: The Final Book of The Hunger Games&quot;,
+        Status: false
+    }
+];
+
+for (let i = 0; i &lt; library.length; i++) {
+    if (library[i].Status === true) {
+        console.log(&quot;Libro:&quot;, library[i].title);
+        console.log(&quot;Autor:&quot;, library[i].author);
+    }
+}</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 8</span>
+      </div>
+      <h2>Crear un programa que tome dos arreglos de números y que retorne un booleano. Unir los dos arreglos en uno solo: si la longitud del nuevo arreglo es mayor o igual a 10 retorna true; si es menor a 10 retorna false.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const arreglo1 = [2, 5, 2, 3, 7, 2];
+const arreglo2 = [1, 5, 3, 3];
+
+const arregloNuevo = arreglo1.concat(arreglo2);
+const resultado = arregloNuevo.length &gt;= 10;
+
+console.log(&quot;ArregloNuevo:&quot;, arregloNuevo);
+console.log(&quot;Resultado:&quot;, resultado);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 9</span>
+      </div>
+      <h2>Crear un programa que tome dos arreglos de números enteros y retornar un único arreglo, cada elemento del arreglo debe estar multiplicado por dos. Ejemplo: [2,5,2][1,5,3] -&gt; [4,10,4,2,10,6].</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const arreglo1 = [2, 5, 2];
+const arreglo2 = [1, 5, 3];
+
+const arregloNuevo = arreglo1.concat(arreglo2);
+
+for (let i = 0; i &lt; arregloNuevo.length; i++) {
+    arregloNuevo[i] = arregloNuevo[i] * 2;
+}
+
+console.log(&quot;ArregloNuevo:&quot;, arregloNuevo);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 10</span>
+      </div>
+      <h2>Solicitar al usuario una calificación entre 1 y 10. Comprobar que esté en ese rango. Mostrar “reprobado” si es inferior a 6, “regular” si está entre 6 y 8, “bien” si es 9 y “excelente” si es 10.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const calificacion = Number(prompt(&quot;Ingrese una calificación entre 1 y 10:&quot;));
+
+if (calificacion &lt; 1 || calificacion &gt; 10 || isNaN(calificacion)) {
+    console.log(&quot;Error: la calificación debe estar entre 1 y 10.&quot;);
+} else if (calificacion &lt; 6) {
+    console.log(&quot;reprobado&quot;);
+} else if (calificacion &lt;= 8) {
+    console.log(&quot;regular&quot;);
+} else if (calificacion === 9) {
+    console.log(&quot;bien&quot;);
+} else {
+    console.log(&quot;excelente&quot;);
+}</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 11</span>
+      </div>
+      <h2>Crear un programa que solicite al usuario 2 números entre 1 y 50. Mostrar en consola los números del 1 hasta el 50 y añadir “¡Lotería!” solo al mostrar los números indicados por el usuario.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const primerNumero = Number(prompt(&quot;Primer número (1-50):&quot;));
+const segundoNumero = Number(prompt(&quot;Segundo número (1-50):&quot;));
+
+if (
+    primerNumero &lt; 1 || primerNumero &gt; 50 ||
+    segundoNumero &lt; 1 || segundoNumero &gt; 50 ||
+    isNaN(primerNumero) || isNaN(segundoNumero)
+) {
+    console.log(&quot;Error: los números deben estar entre 1 y 50.&quot;);
+} else {
+    for (let i = 1; i &lt;= 50; i++) {
+        if (i === primerNumero || i === segundoNumero) {
+            console.log(i, &quot;¡Lotería!&quot;);
+        } else {
+            console.log(i);
+        }
+    }
+}</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 12</span>
+      </div>
+      <h2>Escriba un programa de JavaScript que itera enteros del 1 al 100. Para múltiplos de tres, imprimir “Fizz”; para múltiplos de cinco, “Buzz”; y para números múltiplos de tres y cinco, “FizzBuzz”.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>for (let i = 1; i &lt;= 100; i++) {
+    if (i % 3 === 0 &amp;&amp; i % 5 === 0) {
+        console.log(&quot;FizzBuzz&quot;);
+    } else if (i % 3 === 0) {
+        console.log(&quot;Fizz&quot;);
+    } else if (i % 5 === 0) {
+        console.log(&quot;Buzz&quot;);
+    } else {
+        console.log(i);
+    }
+}</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 13</span>
+      </div>
+      <h2>Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen 1 año, $100; 2 años, $200, y así sucesivamente hasta 5 años. Para más de 5 años, el bono será de $1000. Determinar el bono que recibirá un trabajador.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const anios = Number(prompt(&quot;Ingrese los años de antigüedad:&quot;));
+
+let bono;
+
+if (anios &gt; 5) {
+    bono = 1000;
+} else {
+    bono = anios * 100;
+}
+
+console.log(&quot;Bono:&quot;, &quot;$&quot; + bono);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 14</span>
+      </div>
+      <h2>Un profesor tiene un salario inicial de $1500 y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el programa utilizando el ciclo apropiado.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>let salario = 1500;
+
+for (let anio = 1; anio &lt;= 6; anio++) {
+    salario = salario * 1.10;
+    console.log(&quot;Año &quot; + anio + &quot;: $&quot; + salario.toFixed(2));
+}
+
+console.log(&quot;Salario al cabo de 6 años: $&quot; + salario.toFixed(2));</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 15</span>
+      </div>
+      <h2>En una lista de palabras, el bibliotecario necesita saber cuál es la palabra más larga. Lista: [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;, &quot;uva&quot;, &quot;fresa&quot;].</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>let palabras = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;, &quot;uva&quot;, &quot;fresa&quot;];
+
+let palabraMasLarga = palabras[0];
+
+for (let i = 1; i &lt; palabras.length; i++) {
+    if (palabras[i].length &gt; palabraMasLarga.length) {
+        palabraMasLarga = palabras[i];
+    }
+}
+
+console.log(&quot;La palabra más larga es:&quot;, palabraMasLarga);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 16</span>
+      </div>
+      <h2>Un coleccionista tiene una caja con varias cartas. Algunas están numeradas del 1 al 10, pero hay cartas repetidas. ¿Cuántas cartas únicas tiene en total? Lista: [1, 2, 3, 4, 2, 3, 5, 6, 7, 8, 1, 9, 10, 10].</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>let cartas = [1, 2, 3, 4, 2, 3, 5, 6, 7, 8, 1, 9, 10, 10];
+
+let cartasUnicas = [];
+
+for (let i = 0; i &lt; cartas.length; i++) {
+    if (!cartasUnicas.includes(cartas[i])) {
+        cartasUnicas.push(cartas[i]);
+    }
+}
+
+console.log(&quot;Cartas únicas:&quot;, cartasUnicas);
+console.log(&quot;Cantidad de cartas únicas:&quot;, cartasUnicas.length);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 17</span>
+      </div>
+      <h2>El helado sin topping cuesta 50 MXN. Oreo cuesta 10 MXN, KitKat 15 MXN y brownie 20 MXN. Si no dispone del topping solicitado, indicar “no tenemos este topping, lo sentimos.” y mostrar el precio del helado sin topping.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const topping = prompt(&quot;Ingrese el topping:&quot;).toLowerCase();
+
+const precioBase = 50;
+let precioTotal;
+
+if (topping === &quot;oreo&quot;) {
+    precioTotal = precioBase + 10;
+} else if (topping === &quot;kitkat&quot;) {
+    precioTotal = precioBase + 15;
+} else if (topping === &quot;brownie&quot;) {
+    precioTotal = precioBase + 20;
+} else {
+    console.log(&quot;no tenemos este topping, lo sentimos.&quot;);
+    precioTotal = precioBase;
+}
+
+console.log(&quot;Precio del helado:&quot;, precioTotal + &quot; MXN&quot;);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 18</span>
+      </div>
+      <h2>El programa educativo contempla: Course $4999 MXN mensual, Carrera $3999 MXN mensual y Master $2999 MXN mensual. Aplicar la beca correspondiente: Facebook 20 %, Google 15 %, Jesua 50 %. Mostrar el precio mensual con descuento y el gasto total según la duración: Course 2 meses, Carrera 6 meses, Master 12 meses.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const programa = prompt(&quot;Elija: Course, Carrera o Master:&quot;).toLowerCase();
+const beca = prompt(&quot;Beca: Facebook, Google o Jesua:&quot;).toLowerCase();
+
+let precioMensual;
+let meses;
+
+if (programa === &quot;course&quot;) {
+    precioMensual = 4999;
+    meses = 2;
+} else if (programa === &quot;carrera&quot;) {
+    precioMensual = 3999;
+    meses = 6;
+} else if (programa === &quot;master&quot;) {
+    precioMensual = 2999;
+    meses = 12;
+} else {
+    console.log(&quot;Programa no válido.&quot;);
+}
+
+let descuento = 0;
+
+if (beca === &quot;facebook&quot;) {
+    descuento = 0.20;
+} else if (beca === &quot;google&quot;) {
+    descuento = 0.15;
+} else if (beca === &quot;jesua&quot;) {
+    descuento = 0.50;
+}
+
+if (precioMensual !== undefined) {
+    const mensualConDescuento = precioMensual * (1 - descuento);
+    const total = mensualConDescuento * meses;
+
+    console.log(&quot;Pago mensual con descuento: $&quot; + mensualConDescuento.toFixed(2));
+    console.log(&quot;Total del programa: $&quot; + total.toFixed(2));
+}</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 19</span>
+      </div>
+      <h2>Crear un programa que solicite números. Si lo introducido es un número, guardarlo en un arreglo. Para terminar, ingresar el número 0. Finalmente mostrar la lista de números capturados.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const numeros = [];
+
+while (true) {
+    const entrada = prompt(&quot;Ingrese un número (0 para terminar):&quot;);
+
+    if (entrada === null) {
+        break;
+    }
+
+    const numero = Number(entrada);
+
+    if (isNaN(numero)) {
+        console.log(&quot;Ingrese un número válido.&quot;);
+        continue;
+    }
+
+    if (numero === 0) {
+        break;
+    }
+
+    numeros.push(numero);
+}
+
+console.log(&quot;Números capturados:&quot;, numeros);</code></pre>
+    </article>
+    
+    <article class="exercise">
+      <div class="exercise-head">
+        <span>Ejercicio 20</span>
+      </div>
+      <h2>Calcular el total a pagar según la distancia recorrida y los litros consumidos. Coche: 0.20 por km; moto: 0.10 por km; autobús: 0.5 por km. Si los litros están entre 0 y 100 se añade 5; si son mayores de 100 se añade 10. Total = (precio por kilómetro × kms recorridos) + extra.</h2>
+      <div class="answer-title">RESPUESTA — CÓDIGO JAVASCRIPT</div>
+      <pre><code>const vehiculo = prompt(&quot;Ingrese el vehículo: coche, moto o autobús&quot;).toLowerCase();
+const kilometros = Number(prompt(&quot;Ingrese los kilómetros recorridos:&quot;));
+const litros = Number(prompt(&quot;Ingrese los litros consumidos:&quot;));
+
+let precioKilometro;
+
+if (vehiculo === &quot;coche&quot;) {
+    precioKilometro = 0.20;
+} else if (vehiculo === &quot;moto&quot;) {
+    precioKilometro = 0.10;
+} else if (vehiculo === &quot;autobús&quot; || vehiculo === &quot;autobus&quot;) {
+    precioKilometro = 0.5;
+} else {
+    console.log(&quot;Vehículo no válido.&quot;);
+}
+
+if (precioKilometro !== undefined) {
+    let extra;
+
+    if (litros &gt;= 0 &amp;&amp; litros &lt;= 100) {
+        extra = 5;
+    } else {
+        extra = 10;
+    }
+
+    const total = (precioKilometro * kilometros) + extra;
+
+    console.log(&quot;Total a pagar:&quot;, total);
+}</code></pre>
+    </article>
+    
+</main>
+<footer class="footer">Módulo 2: Fundamentos de programación · Semana 10</footer>
+</body>
+</html>
